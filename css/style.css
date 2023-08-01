@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: 0;
+}
+
+.game-board{
+    width: 100%;
+    height: 690px;
+    border-bottom: 15px solid rgb(40, 193, 40);
+    background-image: url(../imgs/imagsj/Cartoon_Forest_BG_03/Cartoon_Forest_BG_03.png);
+    background-position: 30px;
+    margin: 0px auto;
+    position:relative;
+    overflow:hidden;
+    flex-direction:row;
+    
+}
+.pontos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.Pvalue{
+    font-weight: 700;
+    font-size: 4.5rem;
+    display: block;
+    margin-top: -10px;
+}
+.menu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.cabo{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.ponto-final{
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+.centro{
+    text-align: center;
+    right: 300px;
+    width: 1500px;
+    color: rgb(255, 255, 255);
+}
+.btn-play{
+    border: none;
+    border-radius: 100px;
+    padding: 10px 15px 10px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    right: 50px;
+}
+/*.faca{
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: pipe-animation 1.7s infinite linear;
+    box-sizing: border-box 10px;
+    margin:1px;
+}*/
+.pipe{
+    position: absolute;
+    bottom: 0;
+    width: 300px;
+    animation: pipe-animation 2s infinite linear;
+    box-sizing: border-box 300px;
+}
+
+.pato{
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -45px;
+}
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+
+
+@Keyframes pipe-animation {
+    from {
+        right:-80px;
+    }
+    to {
+        right:100%;
+    }
+}
+
+@Keyframes jump {
+    
+    0%{
+        bottom: 0px;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60% {
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
